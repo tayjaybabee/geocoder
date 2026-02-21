@@ -19,6 +19,10 @@ module Geocoder::Result
       data_part('place') || context_part('place')
     end
 
+    def county
+      data_part('district') || context_part('district')
+    end
+
     def state
       data_part('region') || context_part('region')
     end
