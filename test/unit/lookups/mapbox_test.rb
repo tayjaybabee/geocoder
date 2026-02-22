@@ -27,6 +27,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "Madison Square Garden, 4 Penn Plz, New York, New York 10119, United States", result.place_name
     assert_equal "4 Penn Plz", result.street
     assert_equal "New York", result.city
+    assert_equal "New York County", result.county
     assert_equal "New York", result.state
     assert_equal "10119", result.postal_code
     assert_equal "NY", result.state_code
@@ -69,6 +70,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "Logan Square, Chicago, Illinois, United States", result.place_name
     assert_equal nil, result.street
     assert_equal "Chicago", result.city
+    assert_equal "Cook County", result.county
     assert_equal "Illinois", result.state
     assert_equal "60647", result.postal_code
     assert_equal "IL", result.state_code
@@ -84,6 +86,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "Chicago, Illinois 60647, United States", result.place_name
     assert_equal nil, result.street
     assert_equal "Chicago", result.city
+    assert_equal "Cook County", result.county
     assert_equal "Illinois", result.state
     assert_equal "60647", result.postal_code
     assert_equal "IL", result.state_code
@@ -99,6 +102,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "Chicago, Illinois, United States", result.place_name
     assert_equal nil, result.street
     assert_equal "Chicago", result.city
+    assert_equal "Cook County", result.county
     assert_equal "Illinois", result.state
     assert_equal nil, result.postal_code
     assert_equal "IL", result.state_code
@@ -114,6 +118,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "Illinois, United States", result.place_name
     assert_equal nil, result.street
     assert_equal nil, result.city
+    assert_equal nil, result.county
     assert_equal "Illinois", result.state
     assert_equal nil, result.postal_code
     assert_equal "IL", result.state_code
@@ -129,6 +134,7 @@ class MapboxTest < GeocoderTestCase
     assert_equal "United States", result.place_name
     assert_equal nil, result.street
     assert_equal nil, result.city
+    assert_equal nil, result.county
     assert_equal nil, result.state
     assert_equal nil, result.postal_code
     assert_equal nil, result.state_code
